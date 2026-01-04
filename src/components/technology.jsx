@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Nav  from "./nav";
-import data from "../assets/data.json";
+import data from "../data.json";
 import bgImg from "../assets/technology/background-technology-desktop.jpg";
 
 export default function Technology() {
