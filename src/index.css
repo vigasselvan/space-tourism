@@ -1,0 +1,396 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+
+/* nav and home page */
+.navBar{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    padding: 40px 0 30px 30px ;
+}
+.logoImg{
+    height: 40px;
+    width: auto;
+}
+.navHr{
+    color: #E5E5DF;
+    position: relative;
+    left: 40px;
+    margin: 0;
+    width: 34%;
+    height: 0px;
+    border-color: grey;
+    z-index: 7;
+}
+.navs{
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0;
+    gap: 10px;
+    width: 60%;
+}
+.navs li a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    opacity: 100%;
+    padding: 25px 30px;
+    font-weight: 400;
+}
+.navs li a:hover{
+    border-bottom: 1px solid #fff;
+    backdrop-filter: blur(10px);
+}
+.homeCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 150px;
+    padding-bottom: 75px;
+}
+.homeTxt{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-self: flex-end;
+}
+.homeTxt h3{
+    font-weight: 300;
+    color: white;
+    opacity: 0.75;
+}
+.homeTxt h1{
+    color: white;
+    font-size: 120px;
+    font-family: serif;
+    font-weight: 100;
+    margin: 10px 0;
+    
+}
+.homeTxt p{
+    color: white;
+    opacity: 0.75;
+    font-weight: 100;
+    word-spacing: 2px;
+    line-height: 1.5em;
+}
+.homeBtn{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+
+}
+.homeBtn a{
+    text-decoration: none;
+    color: black;
+}
+.btnWrap{
+    background-color: white;
+    border-radius: 50%;
+    padding: 70px 50px; 
+}
+.btnWrap:hover{
+    transform: scale(1.15);
+    background-color: blueviolet;
+    opacity: 0.2;
+
+}
+.homeBtn h2{
+    font-weight: 100;
+    font-family: serif;
+}
+
+
+/* Destination Page */
+.destCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.leftArea{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.leftArea h3{
+    color: white;
+    padding-top: 30px;
+    padding-left: 90px;
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+.leftArea img{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 70px;
+    padding: 60px;
+    animation: rotation 60s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+.rightArea{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.destList{
+    color: white;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.destList p{
+    padding: 10px 15px;
+    margin: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.destList p:hover{
+    opacity: 0.3;
+    cursor: pointer;
+
+}
+.destList p.selected {
+    border-bottom: 2px solid #fff;
+}
+.destName{
+    color: white;
+    font-family: 'Bellefair', serif;
+    margin: 10px;
+    font-size: 82px;
+    text-transform: uppercase;
+}
+.destDesc{
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    width: 66%;
+    margin-left: 14px;
+    padding-bottom: 40px;
+    text-align: left;
+    font-weight: 400;
+    opacity: 0.6;   
+    line-height: 1.75em;
+}
+.destHr{
+    color: white;
+    margin-left: 16px;
+    width: 66%;
+    opacity: 0.2;
+}
+.destStat{
+    color: white;
+    font-family: 'Barlow', sans-serif;  
+    display: flex;
+    text-transform: uppercase;
+}
+.avgDist{
+    text-align: left;
+    padding: 20px;
+}
+.distDest{
+    font-weight: 100;
+    margin: 0;
+}
+.timeDist{
+    text-align: left;
+    padding: 20px;
+    padding-left: 46px;
+}
+.timeDest{
+    font-weight: 100;
+    margin: 0;
+}
+
+
+/* CREW PAGE */
+.crewCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.crewNameCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 82%;
+    margin-left: 200px;
+}
+.leftAreaCrew{
+    color: white;
+    float: left;
+    width: 50%;
+    padding: 10px;      
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.crewDesg{
+    font-size: 2rem;
+    line-height: 1.75rem;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+
+}
+.crewName{
+    font-size: 2.25rem;
+    line-height: 1.75rem;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+}
+.crewBio{
+    font-family: 'Barlow', sans-serif;
+    opacity: 0.6;
+    line-height: 1.75rem;
+    font-size: 18px;
+}
+.buttonColl{
+    width: 82%;
+    margin-top: 30px;
+    
+}
+.button{
+    padding:7px;
+    margin: 10px;
+    opacity: 0.7;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover{
+    background-color: #fff;
+    opacity: 1;
+}
+
+.rightAreaCrew{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.rightAreaCrew img{
+    height: 550px;
+}
+
+
+/* TECHNOLOGY */
+.techCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.leftAreaTech{
+    color: white;
+    float: left;
+    width: 50%;
+    padding: 10px;      
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.buttonCollTech{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-left: 100px;
+}
+.buttonTech{
+    padding:16px 25px;
+    margin: 10px;
+    font-size: 25px;
+    color: #fff;
+    background-color: transparent;
+    border:1px solid white ;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.buttonTech:hover{
+    background-color: #fff;
+    color: black;
+}
+.techNameCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 82%;
+    margin: 33px;
+}
+.techName{
+    font-size: 3rem;
+    line-height: 1.75rem;
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+}
+.techBio{
+    font-family: 'Barlow', sans-serif;
+    opacity: 0.6;
+    line-height: 1.75rem;
+    font-size: 18px;
+}
+
+.rightAreaTech{
+    width: 50%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.rightAreaTech img{
+    height: 400px;
+    float: right;
+}
