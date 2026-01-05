@@ -26,7 +26,6 @@ export default function destination() {
       (destination) => destination.name.toLowerCase() === destinationName[value].toLowerCase()
     );
   
-    const currImg = selectedDestination.images.webp;
 
     return( 
         <>
@@ -61,7 +60,6 @@ export default function destination() {
                     <hr className="destHr"></hr>
                     <div className="destStat">
                         <div className="avgDist">
-                            <img src={currImg} alt={selectedDestination.name} />
                             <p style={{opacity: 0.5}}>AVG. DISTANCE</p>
                             <h1 className="distDest">{selectedDestination.distance}</h1>
                         </div>

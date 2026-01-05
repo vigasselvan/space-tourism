@@ -1,11 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Nav  from "./nav";
 import data from "../data.json";
 import bgImg from "../assets/crew/background-crew-desktop.jpg";
+import douglasImg from "../assets/crew/image-douglas-hurley.webp";
+import markImg from "../assets/crew/image-mark-shuttleworth.webp";
+import victorImg from "../assets/crew/image-victor-glover.webp";
+import anoushehImg from "../assets/crew/image-anousheh-ansari.webp";
+
 
 export default function crew() {
   const [value, setvalue] = useState(0);
     const crewName = ["Douglas Hurley","Mark Shuttleworth","Victor Glover","Anousheh Ansari"]; 
+    const crewImg = {
+        "Douglas Hurley" : douglasImg,
+        "Mark Shuttleworth" : markImg,
+        "Victor Glover" : victorImg,
+        "Anousheh Ansari" : anoushehImg
+    }
 
     // Findind the selected destination from the data
     const selectedCrew = data.crew.find(
@@ -42,7 +53,7 @@ export default function crew() {
 
                     </div>
                     <div className="rightAreaCrew">
-                        <img src={selectedCrew.images.webp} alt={selectedCrew.name} />
+                        <img src={crewImg[selectedCrew.name]} alt={selectedCrew.name} />
                     </div>
                 </div>
 

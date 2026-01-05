@@ -2,10 +2,19 @@ import React, {useState} from "react";
 import Nav  from "./nav";
 import data from "../data.json";
 import bgImg from "../assets/technology/background-technology-desktop.jpg";
+import launchImg from "../assets/technology/image-launch-vehicle-portrait.jpg"
+import spaceportImg from "../assets/technology/image-spaceport-portrait.jpg"
+import capsuleImg from "../assets/technology/image-space-capsule-portrait.jpg"
+
 
 export default function Technology() {
   const [value, setvalue] = useState(0);
     const techName = ["Launch vehicle", "Spaceport","Space capsule"]; 
+    const techImg = {
+        "Launch vehicle" : launchImg,
+        "Spaceport" : spaceportImg,
+        "Space capsule" : capsuleImg
+    }
 
     // Findind the selected destination from the data
     const selectedTech = data.technology.find(
@@ -38,7 +47,7 @@ export default function Technology() {
 
                     </div>
                     <div className="rightAreaTech">
-                        <img src={selectedTech.images.portrait} alt={selectedTech.name} />
+                        <img src={techImg[selectedTech.name]} alt={selectedTech.name} />
                     </div>
                 </div>
 
